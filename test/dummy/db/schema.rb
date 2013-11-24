@@ -11,12 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130727211531) do
+ActiveRecord::Schema.define(version: 20131113224223) do
 
-  create_table "ads_panels", force: true do |t|
+  create_table "ads_ads", force: true do |t|
+    t.integer  "campaign_id"
+    t.integer  "banner_id"
+    t.string   "link"
+    t.string   "file"
+    t.integer  "display_count"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "disable"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ads_ads", ["banner_id"], name: "index_ads_ads_on_banner_id"
+  add_index "ads_ads", ["campaign_id"], name: "index_ads_ads_on_campaign_id"
+
+  create_table "ads_banners", force: true do |t|
     t.string   "name"
     t.integer  "width"
     t.integer  "height"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ads_campaigns", force: true do |t|
+    t.string   "name"
+    t.string   "advertiser"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "author"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

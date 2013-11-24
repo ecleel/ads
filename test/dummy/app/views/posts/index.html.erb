@@ -1,0 +1,21 @@
+<h1>Posts</h1>
+
+<%= banner_for :big_one %>
+
+<% @posts.each do |post| %>
+  <h3>
+    <%= link_to post.title, post %> 
+    <small>by <%= post.author %></small>
+  </h3>
+  
+  <%= simple_format post.body %>
+  
+  <footer>
+    <%= link_to 'Edit', edit_post_path(post) %> | 
+    <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </footer>
+<% end %>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>
