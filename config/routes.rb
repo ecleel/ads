@@ -1,6 +1,10 @@
 Ads::Engine.routes.draw do
-  resources :campaigns do    
-    resources :ads
+  namespace :admin do
+    resources :campaigns do    
+      resources :ads
+    end
+    resources :banners
   end
-  resources :banners
+  
+  resources :ads, only: :index
 end

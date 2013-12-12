@@ -18,9 +18,9 @@
         <td><%= campaign.id %></td>
         <td><%= campaign.name %></td>
         <td><%= campaign.advertiser %></td>
-        <td><%= link_to 'Show', campaign %></td>
-        <td><%= link_to 'Edit', edit_campaign_path(campaign) %></td>
-        <td><%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [:admin, campaign] %></td>
+        <td><%= link_to 'Edit', edit_admin_campaign_path(campaign) %></td>
+        <td><%= link_to 'Destroy', [:admin, campaign], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Campaign', new_campaign_path %>
+<%= link_to 'New Campaign', new_admin_campaign_path %>

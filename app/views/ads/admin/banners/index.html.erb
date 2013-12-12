@@ -20,9 +20,9 @@
         <td><%= banner.name %></td>
         <td><%= banner.width %></td>
         <td><%= banner.height %></td>
-        <td><%= link_to 'Show', banner %></td>
-        <td><%= link_to 'Edit', edit_banner_path(banner) %></td>
-        <td><%= link_to 'Destroy', banner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [:admin, banner] %></td>
+        <td><%= link_to 'Edit', edit_admin_banner_path(banner) %></td>
+        <td><%= link_to 'Destroy', [:admin, banner], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Banner', new_banner_path %>
+<%= link_to 'New Banner', new_admin_banner_path %>

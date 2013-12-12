@@ -24,9 +24,9 @@
         <td><%= ad.start_date %></td>
         <td><%= ad.end_date %></td>
         <td><%= ad.disable %></td>
-        <td><%= link_to 'Show', campaign_ad_path(@campaign, ad) %></td>
-        <td><%= link_to 'Edit', edit_campaign_ad_path(@campaign, ad) %></td>
-        <td><%= link_to 'Destroy', campaign_ad_path(@campaign, ad), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', admin_campaign_ad_path(@campaign, ad) %></td>
+        <td><%= link_to 'Edit', edit_admin_campaign_ad_path(@campaign, ad) %></td>
+        <td><%= link_to 'Destroy', admin_campaign_ad_path(@campaign, ad), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Ad', new_campaign_ad_path(@campaign) %>
+<%= link_to 'New Ad', new_admin_campaign_ad_path(@campaign) %>
