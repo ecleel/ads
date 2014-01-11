@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131113224223) do
+ActiveRecord::Schema.define(version: 20140106155647) do
 
   create_table "ads_ads", force: true do |t|
     t.integer  "campaign_id"
@@ -43,6 +43,21 @@ ActiveRecord::Schema.define(version: 20131113224223) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "ads_stats", force: true do |t|
+    t.integer  "ad_id"
+    t.string   "ip_address"
+    t.string   "request_hash"
+    t.string   "session_hash"
+    t.text     "referer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ads_stats", ["ad_id"], name: "index_ads_stats_on_ad_id"
+  add_index "ads_stats", ["ip_address"], name: "index_ads_stats_on_ip_address"
+  add_index "ads_stats", ["request_hash"], name: "index_ads_stats_on_request_hash"
+  add_index "ads_stats", ["session_hash"], name: "index_ads_stats_on_session_hash"
 
   create_table "posts", force: true do |t|
     t.string   "title"
