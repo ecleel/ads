@@ -11,3 +11,257 @@
  *= require_self
  *= require_tree .
  */
+body {
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+.content {
+  margin: 30px 0 10px;
+}
+.center {
+  text-align: center;
+}
+.center h1 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+#notice {
+  width: 40%;
+  margin: 5px auto 5px auto;
+  padding: 5px;
+  border: 1px solid green;
+  border-radius: 5px;
+  background-color: limegreen;
+  color: #ffffff;
+  position: relative;
+  animation:ads 5s 1 3s forwards;
+  -webkit-animation:ads 5s 1 3s forwards;
+}
+@-webkit-keyframes ads {
+  0% {top:0px;}
+  100% {bottom:100px;}
+}
+@keyframes ads {
+  0% {top:0px;}
+  100% {top:200px;}
+}
+.title {
+  margin-left: auto;
+  margin-right: auto;
+}
+.action {
+  float: right;
+  margin-right: 20px;
+}
+.form {
+  margin: 50px auto 50px auto;
+  padding: 20px 20px 20px 20px;
+  width: 550px;
+}
+.form div label {
+  width: 100px;
+  float: left;
+  text-align: left;
+  padding-right: 15px;
+  padding-left: 30px;
+  margin-top: 15px;
+}
+.form div.actions {
+  position: relative;
+  top: 15px;
+  left: 20px;
+  padding: 6px 12px 6px 12px;
+  margin-right: 5px;
+  height: 30px;
+
+}
+.form div select {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0 5px;
+  padding: 5px 10px 5px 10px;
+  height: 40px;
+  width: 270px;
+  text-align: left;
+}
+#ad_file {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0 5px;
+  padding: 5px 10px 5px 10px;
+  height: 40px;
+  width: 250px;
+  text-align: left;
+}
+.large {
+  width: 250px;
+}
+.form-input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0 5px;
+  padding: 5px 10px 5px 10px;
+  height: 30px;
+  text-align: left;
+}
+.form-input:focus{
+  border: 1px solid #8e908e;
+}
+.button {
+  padding: 6px 12px 6px 12px;
+  height: 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: black;
+}
+.button:hover {
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+.button:active, .button:focus {
+  box-shadow: 3px 2px 10px 2px gray inset;
+}
+.button.small {
+  height: 20px;
+  border-radius: 3px;
+  padding: 3px 6px 3px 6px;
+  font-size: 10px;
+}
+.button.blue {
+  background-color: #428bca;
+  border: solid 1px #357ebd;
+  color: #ffffff;
+}
+.button.blue:hover {
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+.button.blue:active , .button.blue:focus {
+  box-shadow: 3px 2px 10px 2px blue inset;
+}
+.button.green {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  color: #ffffff;
+}
+.button.green:hover {
+  background-color: #47a447;
+  border-color: #398439;
+}
+.button.green:active , .button.green:focus {
+  box-shadow: 3px 2px 10px 2px green inset;
+}
+.button.red {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.button.red:hover {
+  background-color: #d2322d;
+  border-color: #ac2925;
+}
+.button.red:active , .button.red:focus {
+  box-shadow: 3px 2px 10px 2px darkred inset;
+}
+
+.cancel {
+  position: relative;
+  bottom: 80px;
+  left: 90px;
+  padding: 0 5px 0 5px;
+  margin: 0px 10px 5px 10px;
+}
+.cancel a {
+  text-decoration: none;
+}
+
+.table-show {
+  width: 20%;
+}
+.table {
+  width: 40%;
+  margin: 20px auto 20px auto;
+
+}
+
+.table.table-show > tbody > tr > th,
+.table.table-show > tbody > tr > td {
+  padding: 8px;
+  line-height: 1.428571429;
+  vertical-align: top;
+  border-bottom: 1px solid #dddddd;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.428571429;
+  vertical-align: top;
+  border-bottom: 1px solid #dddddd;
+}
+
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dddddd;
+}
+
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+
+.table > tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+.sidebar {
+  float: left;
+  position: absolute;
+  left: -2px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 90px;
+  height: 200px;
+  border: 1px solid black;
+  padding: 10px 0 10px;
+  background-color: #333333;
+}
+.sidebar > ul {
+  display: inline;
+  list-style-type: none;
+  -webkit-padding-start: 0;
+}
+.sidebar > ul > li {
+  padding: 10px 5px 10px 3px;
+  position: relative;
+  top: 20px;
+}
+.sidebar > ul > li > a {
+  color: #ffffff;
+  width: 70px;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto 0 auto;
+}
+.sidebar > ul > li:hover:not(.ads) {
+  background: black;
+}
+.ads {
+  color: #ffffff;
+  font: 25px bold;
+  margin-left: 12px;
+  padding-bottom: 30px;
+}

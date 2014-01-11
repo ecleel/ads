@@ -2,5 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', [:admin, @campaign, @ad] %> |
-<%= link_to 'Back', admin_campaign_ads_path(@campaign) %>
+<div class="cancel">
+  or <%= link_to 'Cancel', admin_campaign_ads_path(@campaign) %>
+</div>

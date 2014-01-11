@@ -2,13 +2,27 @@
 <html>
 <head>
   <title>Ads</title>
-  <%= stylesheet_link_tag    "ads/application", media: "all" %>
-  <%= javascript_include_tag "ads/application" %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<nav class="sidebar">
+  <ul class="ads">
+     ADS
+  </ul>
+  <ul>
+    <li><%= link_to 'Campaigns', admin_campaigns_path %></li>
+  </ul>
+  <ul>
+    <li><%= link_to 'Banners', admin_banners_path %></li>
+  </ul>
+</nav>
+<div >
+  <a></a>
+</div>
+  <div class="center">
+  <%= yield %>
+  </div>
 </body>
 </html>
