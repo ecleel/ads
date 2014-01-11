@@ -3,7 +3,7 @@ require_dependency "ads/application_controller"
 module Ads
   module Admin
     
-    class AdsController < ApplicationController
+    class AdsController < BaseController
       before_action :set_ad, only: [:show, :edit, :update, :destroy]
       before_action :set_campaign
       before_action :set_banner_list, only: [:new, :edit, :update, :create]

@@ -3,7 +3,7 @@ require_dependency "ads/application_controller"
 module Ads
   module Admin
     
-    class BannersController < ApplicationController
+    class BannersController < BaseController
       before_action :set_banner, only: [:show, :edit, :update, :destroy]
 
       # GET /banners

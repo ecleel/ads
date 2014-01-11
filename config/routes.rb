@@ -6,5 +6,5 @@ Ads::Engine.routes.draw do
     resources :banners
   end
   
-  resources :ads, only: :index
+  resources :ads, only: [:index, :show]
 end

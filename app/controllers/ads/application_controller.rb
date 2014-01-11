@@ -1,5 +1,2 @@
-module Ads
-  class ApplicationController < ActionController::Base
-    # TODO Authentication
-  end
+class Ads::ApplicationController < ApplicationController
 end

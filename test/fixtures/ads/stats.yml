@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ad_id: 
+  ip_address: MyString
+  request_hash: MyString
+  session_hash: MyString
+  referrer: MyText
+
+two:
+  ad_id: 
+  ip_address: MyString
+  request_hash: MyString
+  session_hash: MyString
+  referrer: MyText
