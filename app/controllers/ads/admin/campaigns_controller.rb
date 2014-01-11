@@ -3,7 +3,7 @@ require_dependency "ads/application_controller"
 module Ads
   module Admin
     
-    class CampaignsController < ApplicationController
+    class CampaignsController < BaseController
       before_action :set_campaign, only: [:show, :edit, :update, :destroy]
 
       # GET /campaigns
