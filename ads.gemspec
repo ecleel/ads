@@ -20,4 +20,5 @@ Gem::Specification.new do |s|
   
   s.add_development_dependency 'jquery-rails'
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'devise', '~> 3.2.2'
 end
