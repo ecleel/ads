@@ -1,4 +1,2 @@
-module Ads
-  class ApplicationController < ActionController::Base
-  end
+class Ads::ApplicationController < ApplicationController
 end

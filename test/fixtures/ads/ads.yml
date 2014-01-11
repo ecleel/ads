@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  campaign_id: 
+  banner_id: 
+  display_counts: 1
+  start_date: 2013-11-11 17:46:34
+  end_date: 2013-11-11 17:46:34
+  disable: 2013-11-11 17:46:34
+
+two:
+  campaign_id: 
+  banner_id: 
+  display_counts: 1
+  start_date: 2013-11-11 17:46:34
+  end_date: 2013-11-11 17:46:34
+  disable: 2013-11-11 17:46:34

@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h3><%= @campaign.name %></h3>
+<h4><%= @campaign.advertiser %></h4>
+
+<br>
+
+<%= render 'ads/admin/ads/table'  %>
+
+<%= link_to 'Edit', edit_admin_campaign_path(@campaign) %> |
+<%= link_to 'Back', admin_campaigns_path %>

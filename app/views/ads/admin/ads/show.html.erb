@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @ad.file.url %>
+<h3><%= @ad.banner.name %></h3>
+<h3><%= @ad.link %></h3>
+<h3><%= @ad.display_count %></h3>
+<h3><%= @ad.start_date %></h3>
+<h3><%= @ad.end_date %></h3>
+<h3><%= @ad.disable %></h3>
+
+
+<%= link_to 'Edit', edit_admin_campaign_ad_path(@campaign, @ad) %> |
+<%= link_to 'Back', admin_campaign_ads_path %>

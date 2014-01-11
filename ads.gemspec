@@ -7,9 +7,9 @@ require "ads/version"
 Gem::Specification.new do |s|
   s.name        = "ads"
   s.version     = Ads::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
+  s.authors     = ["Abdulaziz AlShetwi"]
+  s.email       = ["aalshetwi@gmail.com"]
+  s.homepage    = "http://ecleel.com"
   s.summary     = "TODO: Summary of Ads."
   s.description = "TODO: Description of Ads."
 
@@ -17,6 +17,8 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.0.0"
-
+  
+  s.add_development_dependency 'jquery-rails'
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'devise', '~> 3.2.2'
 end

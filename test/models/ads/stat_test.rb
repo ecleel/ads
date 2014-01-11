@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module Ads
-  class PanelTest < ActiveSupport::TestCase
+  class StatTest < ActiveSupport::TestCase
     # test "the truth" do
     #   assert true
     # end
