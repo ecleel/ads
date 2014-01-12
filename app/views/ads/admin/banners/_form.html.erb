@@ -1,3 +1,4 @@
+<div class="form">
 <%= form_for [:admin, @banner] do |f| %>
   <% if @banner.errors.any? %>
     <div id="error_explanation">
@@ -13,20 +14,22 @@
 
   <div>
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class:'form-input' %>
   </div>
   
   <div>
     <%= f.label :width %>
-    <%= f.text_field :width %>
+    <%= f.text_field :width, class:'form-input' %>
   </div>
 
   <div>
     <%= f.label :height %>
-    <%= f.text_field :height %>
+    <%= f.text_field :height, class:'form-input' %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create', class:'button green' %>
   </div>
+
 <% end %>
+</div>

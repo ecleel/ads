@@ -1,11 +1,24 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 
-<h3><%= @campaign.name %></h3>
-<h4><%= @campaign.advertiser %></h4>
+<h2><%= @campaign.name %></h2>
+<table class="table table-show">
+  <tr>
+    <th>name</th>
+    <td><%= @campaign.name %></td>
+  </tr>
+  <tr>
+    <th>advertiser</th>
+    <td><%= @campaign.advertiser %></td>
+  </tr>
+</table>
 
 <br>
+<div class="action">
+  <%= link_to 'Edit', edit_admin_campaign_path(@campaign), class:'button blue' %>
+  <%= link_to 'Back', admin_campaigns_path, class:'button' %>
+</div>
 
 <%= render 'ads/admin/ads/table'  %>
 
-<%= link_to 'Edit', edit_admin_campaign_path(@campaign) %> |
-<%= link_to 'Back', admin_campaigns_path %>
