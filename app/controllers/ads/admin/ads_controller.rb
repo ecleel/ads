@@ -15,6 +15,7 @@ module Ads
 
       # GET /ads/1
       def show
+        @stats = @ad.stats
       end
 
       # GET /ads/new
