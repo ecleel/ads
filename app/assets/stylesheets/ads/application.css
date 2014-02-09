@@ -9,8 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  */
+
 body {
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
