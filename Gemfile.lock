@@ -117,6 +117,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.0)
   devise (~> 3.2.2)
+  i18n
   jquery-rails
   sass-rails (~> 4.0.0)
   sqlite3
