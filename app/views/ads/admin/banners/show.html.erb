@@ -1,21 +1,30 @@
 <% if notice.present? %>
   <p id="notice"><%= notice %></p>
 <% end %>
-<h2><%= @banner.name %></h2>
-<table class="table table-show">
-  <tr>
-    <th>name</th>
-    <td><%= @banner.name %></td>
-  </tr>
-  <tr>
-    <th>width</th>
-    <td><%= @banner.width %></td>
-  </tr>
-  <tr>
-    <th>height</th>
-    <td><%= @banner.height %></td>
-  </tr>
-</table>
+<div class="show-container">
+  <div class="title-header">
+    <h1><%= @banner.name %></h1>
+    <div class="action">
+      <%= link_to t('edit'), edit_admin_banner_path(@banner), class:'button blue' %>
+      <%= link_to t('back'), admin_banners_path, class:'button' %>
+    </div>
+  </div>
+  <table class="table-show">
+    <tr>
+      <th><%= Ads::Banner.human_attribute_name('name') %></th>
+      <td><%= @banner.name %></td>
+    </tr>
+    <tr>
+      <th><%= Ads::Banner.human_attribute_name('width') %></th>
+      <td><%= @banner.width %></td>
+    </tr>
+    <tr>
+      <th><%= Ads::Banner.human_attribute_name('height') %></th>
+      <td><%= @banner.height %></td>
+    </tr>
+  </table>
+</div>
 
-<%= link_to 'Edit', edit_admin_banner_path(@banner), class:'button blue' %>
-<%= link_to 'Back', admin_banners_path, class:'button' %>
+
+
+

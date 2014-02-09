@@ -1,17 +1,17 @@
 <div class="content">
-  <h2>Listing ads</h2>
+  <h2><%= t('activerecord.models.ads/ad.few') %></h2>
   <br>
-  <%= link_to 'New Advertiser', new_admin_campaign_ad_path(@campaign), class: 'button' %>
+  <%= link_to t('new_model', model: t('activerecord.models.ads/ad.one')), new_admin_campaign_ad_path(@campaign), class: 'button' %>
   <table class="table">
     <thead>
       <tr>
         <th>#</th>
-        <th>Banner</th>
-        <th>Display Count</th>
-        <th>Start Date</th>
-        <th>End Date</th>
-        <th>Disable</th>
-        <th colspan="3">Action</th>
+        <th><%= Ads::Ad.human_attribute_name('banner') %></th>
+        <th><%= Ads::Ad.human_attribute_name('display_count') %></th>
+        <th><%= Ads::Ad.human_attribute_name('start_date') %></th>
+        <th><%= Ads::Ad.human_attribute_name('end_date') %></th>
+        <th><%= Ads::Ad.human_attribute_name('disable') %></th>
+        <th colspan="3"><%= t('actions') %></th>
       </tr>
     </thead>
 
@@ -24,9 +24,9 @@
           <td><%= ad.start_date %></td>
           <td><%= ad.end_date %></td>
           <td><%= ad.disable %></td>
-          <td><%= link_to 'Show', admin_campaign_ad_path(@campaign, ad), class:'button small green' %></td>
-          <td><%= link_to 'Edit', edit_admin_campaign_ad_path(@campaign, ad), class:'button small blue' %></td>
-          <td><%= link_to 'Destroy', admin_campaign_ad_path(@campaign, ad), class:'button small red',
+          <td><%= link_to t('show'), admin_campaign_ad_path(@campaign, ad), class:'button small green' %></td>
+          <td><%= link_to t('edit'), edit_admin_campaign_ad_path(@campaign, ad), class:'button small blue' %></td>
+          <td><%= link_to t('destroy'), admin_campaign_ad_path(@campaign, ad), class:'button small red',
                           method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>

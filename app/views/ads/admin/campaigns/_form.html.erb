@@ -22,7 +22,8 @@
     <%= f.text_field :advertiser, class:'form-input' %>
   </div>
   <div class="actions">
-    <%= f.submit 'Create', class:'button green' %>
+    <%= f.submit id: 'submit', class:'button green' %>
+    <%= t('or') %>  <%= link_to t('cancel'), admin_banners_path %>
   </div>
 <% end %>
 </div>

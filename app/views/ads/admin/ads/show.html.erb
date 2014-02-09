@@ -1,35 +1,57 @@
 <% if notice.present? %>
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 <% end %>
-<h2><%= @ad.banner.name %></h2>
-<%= image_tag @ad.file.url %>
 
-<table class="table table-show">
+
+<div class="show-container">
+  <div class="title-header">
+    <h1><%= @ad.banner.name %></h1>
+    <div class="action">
+      <%= link_to t('edit'), edit_admin_campaign_ad_path(@campaign, @ad), class:'button blue' %>
+      <%= link_to t('back'), admin_campaign_ads_path, class:'button' %>
+    </div>
+  </div>
+  <div class="ad-image">
+    <%= image_tag(@ad.file.url) %>
+  </div>
+
+</div>
+<table class="table table-ad">
   <tr>
-    <th>name</th>
+    <th><%= Ads::Ad.human_attribute_name('name') %></th>
     <td><%= @ad.banner.name %></td>
   </tr>
   <tr>
-    <th>Link</th>
+    <th><%= Ads::Ad.human_attribute_name('link') %></th>
     <td><%= @ad.link %></td>
   </tr>
   <tr>
-    <th>Display count</th>
+    <th><%= Ads::Ad.human_attribute_name('display_count') %></th>
     <td><%= @ad.display_count %></td>
   </tr>
   <tr>
-    <th>Start Date</th>
+    <th><%= Ads::Ad.human_attribute_name('start_date') %></th>
     <td><%= @ad.start_date %></td>
   </tr>
   <tr>
-    <th>End Date</th>
+    <th><%= Ads::Ad.human_attribute_name('end_date') %></th>
     <td><%= @ad.end_date %></td>
   </tr>
   <tr>
-    <th>Disable</th>
+    <th><%= Ads::Ad.human_attribute_name('disable') %></th>
     <td><%= @ad.disable %></td>
+  </tr>
+  <tr>
+    <th><%= Ads::Ad.human_attribute_name('view') %></th>
+    <td><%= @stats.count %></td>
+  </tr>
+  <tr>
+    <th><%= Ads::Ad.human_attribute_name('uniq_view') %></th>
+    <td><%= @stats.uniq.count(:ip_address) %></td>
   </tr>
 </table>
 
-<%= link_to 'Edit', edit_admin_campaign_ad_path(@campaign, @ad), class:'button blue' %>
-<%= link_to 'Back', admin_campaign_ads_path, class:'button' %>
+
+
+
+
