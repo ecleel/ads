@@ -2,7 +2,7 @@ require_dependency "ads/application_controller"
 
 module Ads
   module Admin
-    class BaseController < ApplicationController
+    class BaseController < Ads::ApplicationController
       # TODO use nested layout to use with what user have
       layout :set_layout
       before_filter :authenticate_ads_user

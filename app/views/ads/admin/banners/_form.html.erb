@@ -1,8 +1,8 @@
 <div class="form">
-<%= form_for [:admin, @banner] do |f| %>
+<%= form_for ([:admin, @banner]) do |f| %>
   <% if @banner.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@banner.errors.count, "error") %> prohibited this banner from being saved:</h2>
+      <h2><%= pluralize(@banner.errors.count, 'error') %> prohibited this banner from being saved:</h2>
 
       <ul>
       <% @banner.errors.full_messages.each do |msg| %>
@@ -28,7 +28,8 @@
   </div>
 
   <div class="actions">
-    <%= f.submit 'Create', class:'button green' %>
+    <%= f.submit id:'submit', class:'button green' %>
+    <%= t('or') %>  <%= link_to t('cancel'), admin_banners_path %>
   </div>
 
 <% end %>

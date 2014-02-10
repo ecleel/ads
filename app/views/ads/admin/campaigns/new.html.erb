@@ -1,6 +1,3 @@
-<h1>New Campaign</h1>
+<h1><%= t('new_model', model: t('activerecord.models.ads/campaign.one')) %></h1>
 
 <%= render 'form' %>
-<div class="cancel">
-or <%= link_to 'Cancel', admin_campaigns_path %>
-</div>

@@ -1,0 +1,65 @@
+ar:
+  activerecord:
+    models:
+      ads/campaign:
+        one: حملة إعلانية
+        two: حملتان إعلانية
+        few: حملات إعلانية
+        many: حملة إعلانية
+      ads/banner:
+        one: مساحة إعلانية
+        two: مساحتان إعلانية
+        few: مساحات إعلانية
+        many: مساحة إعلانية
+      ads/ad:
+        one: إعلان
+        two: إعلانين
+        few: إعلانات
+        many: إعلان
+    attributes:
+      name: الاسم
+      ads/campaign:
+        name: الاسم
+        advertiser: المعلن
+      ads/banner:
+        name: الاسم
+        width: العرض
+        height: الطول
+      ads/ad:
+        name: الاسم
+        banner: لافتة
+        display_count: عداد المشاهدات
+        start_date: تاريخ البدء
+        end_date: تاريخ الانتهاء
+        disable: مؤقف
+        file: الملف
+        link: الرابط
+        view: عدد المشاهدات
+        uniq_view: المشاهدات غير مكررة
+  helpers:
+    select:
+      # Default value for :prompt => true in FormOptionsHelper
+      prompt: "الرجاء الاختيار"
+    # Default translation keys for submit FormHelper
+    submit:
+      create: 'انشاء %{model}'
+      update: 'تحديث %{model}'
+      submit: 'حفظ %{model}'
+      login: تسجيل دخول
+      accept: قبول
+      reject: رفض
+
+    # Default translation keys for button FormHelper
+  actions: عمليات
+  show: مشاهدة
+  edit: تعديل
+  destroy: حذف
+  back: رجوع
+  cancel: الغاء
+  or: أو
+  topbar:
+    admin: لوحة التحكم
+  new: جديد
+  new_model: إضافة %{model}
+  edit_model: تعديل %{model}
+  update_model: تحديث %{model}

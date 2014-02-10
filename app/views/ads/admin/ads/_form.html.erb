@@ -45,7 +45,8 @@
   </div>
 
   <div class="actions">
-    <%= f.submit 'Create' ,class:'button green' %>
+    <%= f.submit id:'submit' ,class:'button green' %>
+    or <%= link_to t('cancel'), admin_campaign_ads_path(@campaign) %>
   </div>
   <% end %>
 </div>
