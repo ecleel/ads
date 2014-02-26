@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ../../../../../app/assets/javascripts/jquery.ads.js.coffee
+//= require ads
 //= require_tree .
