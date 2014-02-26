@@ -1,5 +1,3 @@
-<h1>New ad</h1>
+<h1><%= t('new_model', model: t('activerecord.models.ads/ad.one')) %></h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Back', admin_campaign_ads_path(@campaign) %>

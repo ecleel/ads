@@ -12,7 +12,7 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
-
+gem 'i18n'
 gem 'carrierwave'
 
 # Use SCSS for stylesheets

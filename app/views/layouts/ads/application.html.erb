@@ -2,13 +2,25 @@
 <html>
 <head>
   <title>Ads</title>
-  <%= stylesheet_link_tag    "ads/application", media: "all" %>
-  <%= javascript_include_tag "ads/application" %>
+  <%= stylesheet_link_tag    'ads/application', media: 'all' %>
+  <%= javascript_include_tag 'ads/application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="sidebar">
+    <ul class="ads">
+       ADS
+    </ul>
+    <ul>
+      <li><%= link_to t('activerecord.models.ads/campaign.few'), admin_campaigns_path %></li>
+    </ul>
+    <ul>
+      <li><%= link_to t('activerecord.models.ads/banner.few'), admin_banners_path %></li>
+    </ul>
+  </nav>
 
-<%= yield %>
-
+  <div class="body-container center">
+    <%= yield %>
+  </div>
 </body>
 </html>

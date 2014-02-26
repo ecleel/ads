@@ -1,4 +1,5 @@
-<%= form_for [:admin, @campaign, @ad] do |f| %>
+<div class="form">
+  <%= form_for [:admin, @campaign, @ad] do |f| %>
   <% if @ad.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@ad.errors.count, "error") %> prohibited this ad from being saved:</h2>
@@ -10,40 +11,42 @@
       </ul>
     </div>
   <% end %>
-  
+
   <%= f.hidden_field :campaign_id, value: @campaign.id %>
 
   <div>
     <%= f.label :banner %>
-    <%= f.select :banner_id, @banner_list %>
+    <%= f.select :banner_id, @banner_list, class:'form-input large' %>
   </div>
-  
+
   <div>
     <%= f.label :display_count %>
-    <%= f.text_field :display_count %>
+    <%= f.text_field :display_count, class:'form-input large' %>
   </div>
 
   <div>
     <%= f.label :start_date %>
-    <%= f.date_field :start_date %>
+    <%= f.date_field :start_date, class:'form-input large' %>
   </div>
 
   <div>
     <%= f.label :end_date %>
-    <%= f.date_field :end_date %>
+    <%= f.date_field :end_date, class:'form-input large' %>
   </div>
-  
+
   <div>
     <%= f.label :file %>
-    <%= f.file_field :file %> or Image link <%= f.text_field :remote_file %>
+    <%= f.file_field :file %>
   </div>
-  
+
   <div>
     <%= f.label :link %>
-    <%= f.text_field :link %>
+    <%= f.text_field :link, class:'form-input large' %>
   </div>
-  
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit id:'submit' ,class:'button green' %>
+    or <%= link_to t('cancel'), admin_campaign_ads_path(@campaign) %>
   </div>
-<% end %>
+  <% end %>
+</div>

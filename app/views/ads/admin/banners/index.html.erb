@@ -1,15 +1,14 @@
-<h1>Listing banners</h1>
+<h1><%= t('activerecord.models.ads/banner.few') %></h1>
+<%= link_to t('new_model', model: t('activerecord.models.ads/banner.one')), new_admin_banner_path, class:'button' %>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <tr>#</tr>
-      <tr>Name</tr>
-      <tr>Width</tr>
-      <tr>Height</tr>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>#</th>
+      <th><%= Ads::Banner.human_attribute_name('name') %></th>
+      <th><%= Ads::Banner.human_attribute_name('width') %></th>
+      <th><%= Ads::Banner.human_attribute_name('height') %></th>
+      <th colspan="3"><%= t('actions') %></th>
     </tr>
   </thead>
 
@@ -20,14 +19,12 @@
         <td><%= banner.name %></td>
         <td><%= banner.width %></td>
         <td><%= banner.height %></td>
-        <td><%= link_to 'Show', [:admin, banner] %></td>
-        <td><%= link_to 'Edit', edit_admin_banner_path(banner) %></td>
-        <td><%= link_to 'Destroy', [:admin, banner], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('show'), [:admin, banner], class:'button green small' %></td>
+        <td><%= link_to t('edit'), edit_admin_banner_path(banner), class:'button blue small' %></td>
+        <td><%= link_to t('destroy'), [:admin, banner], class:'button red small', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Banner', new_admin_banner_path %>

@@ -1,7 +1,8 @@
-<%= form_for [:admin, @banner] do |f| %>
+<div class="form">
+<%= form_for ([:admin, @banner]) do |f| %>
   <% if @banner.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@banner.errors.count, "error") %> prohibited this banner from being saved:</h2>
+      <h2><%= pluralize(@banner.errors.count, 'error') %> prohibited this banner from being saved:</h2>
 
       <ul>
       <% @banner.errors.full_messages.each do |msg| %>
@@ -13,20 +14,23 @@
 
   <div>
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class:'form-input' %>
   </div>
   
   <div>
     <%= f.label :width %>
-    <%= f.text_field :width %>
+    <%= f.text_field :width, class:'form-input' %>
   </div>
 
   <div>
     <%= f.label :height %>
-    <%= f.text_field :height %>
+    <%= f.text_field :height, class:'form-input' %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit id:'submit', class:'button green' %>
+    <%= t('or') %>  <%= link_to t('cancel'), admin_banners_path %>
   </div>
+
 <% end %>
+</div>

@@ -1,37 +1,35 @@
-<h2>Listing ads</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>banner</th>
-      <th>display count</th>
-      <th>start date</th>
-      <th>End Date</th>
-      <th>Disable</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @ads.each do |ad| %>
+<div class="content">
+  <h2><%= t('activerecord.models.ads/ad.few') %></h2>
+  <br>
+  <%= link_to t('new_model', model: t('activerecord.models.ads/ad.one')), new_admin_campaign_ad_path(@campaign), class: 'button' %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= ad.id %></td>
-        <td><%= ad.banner.try :name %></td>
-        <td><%= ad.display_count %></td>
-        <td><%= ad.start_date %></td>
-        <td><%= ad.end_date %></td>
-        <td><%= ad.disable %></td>
-        <td><%= link_to 'Show', admin_campaign_ad_path(@campaign, ad) %></td>
-        <td><%= link_to 'Edit', edit_admin_campaign_ad_path(@campaign, ad) %></td>
-        <td><%= link_to 'Destroy', admin_campaign_ad_path(@campaign, ad), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>#</th>
+        <th><%= Ads::Ad.human_attribute_name('banner') %></th>
+        <th><%= Ads::Ad.human_attribute_name('display_count') %></th>
+        <th><%= Ads::Ad.human_attribute_name('start_date') %></th>
+        <th><%= Ads::Ad.human_attribute_name('end_date') %></th>
+        <th><%= Ads::Ad.human_attribute_name('disable') %></th>
+        <th colspan="3"><%= t('actions') %></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Ad', new_admin_campaign_ad_path(@campaign) %>
+    <tbody>
+      <% @ads.each do |ad| %>
+        <tr>
+          <td><%= ad.id %></td>
+          <td><%= ad.banner.try :name %></td>
+          <td><%= ad.display_count %></td>
+          <td><%= ad.start_date %></td>
+          <td><%= ad.end_date %></td>
+          <td><%= ad.disable %></td>
+          <td><%= link_to t('show'), admin_campaign_ad_path(@campaign, ad), class:'button small green' %></td>
+          <td><%= link_to t('edit'), edit_admin_campaign_ad_path(@campaign, ad), class:'button small blue' %></td>
+          <td><%= link_to t('destroy'), admin_campaign_ad_path(@campaign, ad), class:'button small red',
+                          method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
