@@ -11,7 +11,8 @@ module Ads
     mount_uploader :file, AdsUploader
     attr_accessor :remote_file
     
-    validates_presence_of :campaign_id, :banner_id#, :file
+    validates :campaign_id, presence: true
+    validates :banner_id,   presence: true
     
   end
 end
