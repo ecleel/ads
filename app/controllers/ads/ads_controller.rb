@@ -8,7 +8,6 @@ module Ads
       ads_count = params[:bc]
       
       if ads_types
-        puts "ads_types: #{ads_types}"
         banner_ids = Banner.where(name: ads_types).pluck(:id)
         @ads = Ad.active.includes(:banner).where(banner_id: banner_ids)
         render json: @ads.each_with_object( Hash.new {|h,k| h[k] = [] } ) {|ad, hsh| hsh[ad.banner.name] << {id: ad.id, link: ad_path(ad), image_path: ad.file.url, banner_name: ad.banner.name, } }
