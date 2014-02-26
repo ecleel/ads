@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Abdulaziz AlShetwi"]
   s.email       = ["aalshetwi@gmail.com"]
   s.homepage    = "http://ecleel.com"
-  s.summary     = "TODO: Summary of Ads."
-  s.description = "TODO: Description of Ads."
+  s.summary     = "Ads Engine for Rails App."
+  s.description = "Easy way to create Ads banner in you site and create Ads campaign and track clicks."
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
