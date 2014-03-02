@@ -1,6 +1,8 @@
 ar:
   activerecord:
     models:
+      created_at: تاريخ الإنشاء
+      updated_at: تاريخ التحديث
       ads/campaign:
         one: حملة إعلانية
         two: حملتان إعلانية
@@ -26,7 +28,7 @@ ar:
         height: الطول
       ads/ad:
         name: الاسم
-        banner: لافتة
+        banner: مساحة إعلانية
         display_count: عداد المشاهدات
         start_date: تاريخ البدء
         end_date: تاريخ الانتهاء
