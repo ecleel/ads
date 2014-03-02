@@ -1,8 +1,8 @@
-= Ads
+# Ads
 
 This project rocks and uses MIT-LICENSE.
 
-# To be continued ..
+## To be continued ..
 
 # Todo
 1. ~~Track every click of ad.~~
