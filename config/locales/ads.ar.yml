@@ -17,7 +17,6 @@ ar:
         few: إعلانات
         many: إعلان
     attributes:
-      name: الاسم
       ads/campaign:
         name: الاسم
         advertiser: المعلن
@@ -34,8 +33,8 @@ ar:
         disable: مؤقف
         file: الملف
         link: الرابط
-        view: عدد المشاهدات
-        uniq_view: المشاهدات غير مكررة
+        click: عدد النقرات
+        uniq_click: النقرات غير المكررة
   helpers:
     select:
       # Default value for :prompt => true in FormOptionsHelper

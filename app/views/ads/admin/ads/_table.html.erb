@@ -1,7 +1,7 @@
 <div class="content">
   <h2><%= t('activerecord.models.ads', count: 3) %></h2>
   <br>
-  <%= link_to t('new_model', model: t('activerecord.models.ads/ad.one')), new_admin_campaign_ad_path(@campaign), class: 'button' %>
+  <%= link_to t('new_model', model: t('activerecord.models.ads/ad', count:1)), new_admin_campaign_ad_path(@campaign), class: 'button' %>
   <table class="table">
     <thead>
       <tr>

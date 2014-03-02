@@ -2,7 +2,6 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 
-
 <div class="show-container">
   <div class="title-header">
     <h1><%= @ad.banner.name %></h1>
@@ -42,16 +41,11 @@
     <td><%= @ad.disable %></td>
   </tr>
   <tr>
-    <th><%= Ads::Ad.human_attribute_name('view') %></th>
+    <th><%= Ads::Ad.human_attribute_name('click') %></th>
     <td><%= @stats.count %></td>
   </tr>
   <tr>
-    <th><%= Ads::Ad.human_attribute_name('uniq_view') %></th>
+    <th><%= Ads::Ad.human_attribute_name('uniq_click') %></th>
     <td><%= @stats.uniq.count(:ip_address) %></td>
   </tr>
 </table>
-
-
-
-
-

@@ -1,5 +1,5 @@
-<h1><%= t('activerecord.models.ads/banner.few') %></h1>
-<%= link_to t('new_model', model: t('activerecord.models.ads/banner.one')), new_admin_banner_path, class:'button' %>
+<h1><%= t('activerecord.models.ads/banner', count: 3) %></h1>
+<%= link_to t('new_model', model: t('activerecord.models.ads/banner', count: 1)), new_admin_banner_path, class:'button' %>
 
 <table class="table">
   <thead>

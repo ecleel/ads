@@ -1,0 +1,15 @@
+en:
+  activerecord:
+    models:
+      ads/campaign:
+        one: Campaign
+        other: Campaigns
+      ads/banner:
+        one: Banner
+        other: Banners
+      ads/ad:
+        one: Ad
+        other: Ads
+  new_model: New %{model}
+  edit_model: Edit %{model}
+  update_model: Update %{model}
