@@ -1,2 +1,2 @@
 jQuery ->
-  $('.banner').ads(debug: true, rotate: false)
+  $('.banner').ads(debug: true, rotate: true)
