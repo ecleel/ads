@@ -29,8 +29,9 @@ $.fn.extend
           banner_div = $(".#{type}")
           width  = banner_div.data 'width'
           height = banner_div.data 'height'
-          banner_div.html "<a href='#{info[0].link}' target='_blank'><img src='#{info[0].image_path}' width='#{width}' height='#{height}' /></a>"
-          log "Type: #{type} info: #{info[0].link}"
+          random_ad= info[Math.floor(Math.random()*info.length)]
+          banner_div.html "<a href='#{random_ad.link}' target='_blank'><img src='#{random_ad.image_path}' width='#{width}' height='#{height}' /></a>"
+          log "Type: #{type} info: #{random_ad.link}"
 
       #   get ads limit by number of banners and respect the banner name.
       #   add image into the banner.
